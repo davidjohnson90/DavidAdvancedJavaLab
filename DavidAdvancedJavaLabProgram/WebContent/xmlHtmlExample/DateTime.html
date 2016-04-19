@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function showday() {
+		var dd = new Date().getDay();
+		switch (dd) {
+		case 1:
+			document.getElementById("demo").innerHTML = "Monday";
+			break;
+		case 2:
+			document.getElementById("demo").innerHTML = "Tuesday";
+			break;
+		case 3:
+			document.getElementById("demo").innerHTML = "Wednesday";
+			break;
+		case 4:
+			document.getElementById("demo").innerHTML = "Thursday";
+			break;
+		case 5:
+			document.getElementById("demo").innerHTML = "Friday";
+			break;
+		case 6:
+			document.getElementById("demo").innerHTML = "Saturday";
+			break;
+		case 7:
+			document.getElementById("demo").innerHTML = "Sunday";
+			break;
+		default:
+			document.getElementById("demo").innerHTML = "Invalid";
+		}
+		var date = new Date().getDate();
+		var month = new Date().getMonth() + 1;
+		var year = new Date().getFullYear();
+		var d = date + "-" + month + "-" + year;
+		document.getElementById("date").innerHTML = d;
+	}
+</script>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="date"></p>
+	<button onClick="showday()">Click here</button>
+</body>
+</html>

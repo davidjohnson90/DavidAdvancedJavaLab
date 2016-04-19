@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Display Text Area</title>
+<script type="text/javascript">
+	function display() {
+		var name = document.getElementById("name").value;
+		var address = document.getElementById("address").value;
+		var phoneno = document.getElementById("phoneNo").value;
+		var email = document.getElementById("email").value;
+		document.getElementById("textArea").innerHTML = name + "\n" + address
+				+ "\n" + phoneno + "\n" + email;
+	}
+</script>
+</head>
+<body>
+	<form>
+		Name : <input id="name" type="text" name="name" /><br> Address :
+		<input id="address" type="text" name="address" /><br> Phone No :
+		<input id="phoneNo" type="text" name="phoneNo" /><br> Email : <input
+			id="email" type="text" name="email" /> <br>
+	</form>
+	<button onclick="display();">Submit</button>
+	<br>
+	<textarea id="textArea" rows="5" cols="100"></textarea>
+</body>
+</html>
